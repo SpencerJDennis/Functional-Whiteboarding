@@ -1,0 +1,15 @@
+Input: "Jasmine Ann Jones"
+Output: "Jasmine%20Ann%20Jones"
+
+
+function turnStringToUrl(string){
+let result = [];
+for(i = 0; i<string.length; i++){
+	if(string[i] == " "){
+  result.push("%20");
+  }else{
+  	result.push(string[i]);
+  }
+}
+return result.join('');
+}
