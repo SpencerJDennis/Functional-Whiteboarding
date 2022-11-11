@@ -1,0 +1,17 @@
+Input: "Jasmine Ann Jones"
+Output: "Jasmine%20Ann%20Jones"
+
+function recursiveUrl(input, output) {
+  if (output == undefined) {
+    output = "";
+  }
+  if (input === "") {
+    return output;
+  }
+  if (input[0] === " ") {
+    output += "%20";
+  } else {
+    output += input[0];
+  }
+  return recursiveUrl(input.substring(1), output);
+}
